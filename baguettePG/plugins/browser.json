@@ -1,0 +1,72 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.bit.baguette"
+        }
+    },
+    "dependent_plugins": {}
+}

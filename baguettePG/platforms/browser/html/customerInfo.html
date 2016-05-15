@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+   <!--  <link rel="stylesheet" href="../lib/jquery-ui-1.11.4/jquery-ui.css"/> -->
+    
+    <script src="../js/common.js"></script>
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+	<!-- <script src="../lib/jquery-ui-1.11.4/jquery-ui.min.js"></script> -->
+  	
+  
+ <!--  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+    
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <div data-role="page" id="customerinfo-page" class="pages">
+        <div data-role="main" class="ui-content main-content">
+       
+        <link rel="stylesheet" href="../css/customerInfo.css" />
+        <div class="bgColor">
+            <h1>구매내역</h1>
+            <!-- datepicker 추가 -->
+            <div>구매일 : <div><input id="purchaseDatepicker" type="text" data-role="date"></div></div>
+            <div data-role="ui-content">
+                 <div id="cdiv"></div>
+            </div>     
+           </div>
+        </div>
+        <script src="../js/pages/customerInfo.js"></script>
+    </div>
+</body>
+
+</html>

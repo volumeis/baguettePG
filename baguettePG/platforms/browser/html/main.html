@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- css -->
+    <link rel="stylesheet" href="../lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css">
+
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/fakeloader/fakeLoader.css">
+    <link rel="stylesheet" href="../lib/jquery-ui/themes/pepper-grinder/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/plugIn/jquery.m.toast.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- 폰트 패밀리 적용 -경철 -->
+    <link rel="stylesheet" href="../css/header.css">
+
+    <!-- js -->
+    <script type="text/javascript" src="https://apis.daum.net/maps/maps3.js?apikey=600264d1d1714d9835001e0deda0b346&libraries=services,clusterer"></script>
+    <script type="text/javascript" src="https://apis.daum.net/maps/maps3.js?apikey=600264d1d1714d9835001e0deda0b346"></script>
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../js/common/common.js"></script>
+    <script src="../js/common/event.js"></script>
+    <script src="../js/common/page.js"></script>
+    <script src="../js/common/closer.js"></script>
+    <script src="../js/common/swipe.js"></script>
+    <!--    좌->우 메뉴, 우->좌 카트 민호 -->
+
+    <script src="../lib/fakeloader/fakeLoader.js"></script>
+    <script src="../js/jQery.headroom.js"></script>
+    <script src="../js/headroom.js"></script>
+    <script src="../lib/handlebars/handlebars.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/plugIn/jquery.m.toast.js"></script>
+
+ <!--
+cbfbdb2372a8e873e875c838efca8260
+600264d1d1714d9835001e0deda0b346
+-->
+    <script src="../lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.js"></script>
+    <script src="../lib/jquery-ui/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+
+    <div data-role="header" id="header" class="header headroom" data-theme="b">
+        <a id="left-panel" href="#menuPanel" data-display="push" class="ui-btn-left">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </a>
+        <a href="#storelist-page" style="text-decoration: none">
+            <div id="baguette-font">Baguette</div>
+        </a>
+        <a id="right-map" href="#map-page" data-transition="slidedown" data-display="push" class="ui-btn-right">
+            <span class="glyphicon glyphicon-map-marker"></span>
+        </a>
+        <a id="right-panel" href="cart.html" data-transition="slide" data-display="push" class="ui-btn-right">
+            <span class="glyphicon glyphicon-shopping-cart"><span class="badge"></span></span>
+        </a>
+    </div>
+
+    <div data-role="page" id="main-page" class="pages"></div>
+    <div data-role="page" id="storelist-page" class="pages"></div>
+    <!-- <div data-role="page" id="cart-page" class="pages"></div> -->
+    <div data-role="page" id="map-page" class="pages"></div>
+    <!-- <div data-role="page" id="customerinfo-page" class="pages"></div> -->
+
+    <!-- 내 위치 설정 -->
+    <div class="modal fade" id="codeError" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-role="none">
+        <div class="modal-dialog modal-sm" data-role="none">
+            <div class="modal-content" data-role="none">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel"> 지도위치설정</h4>
+                </div>
+                <button id="myLocBtn" type="button" class="btn btn-default" data-role="none">내 현재 위치 기준</button>
+                <div class="modal-footer" data-role="none">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" data-role="none">현재 위치 사용안함</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="homeloader"></div>
+    <div id="fakeloader"></div>
+    <script>
+        $("#header").headroom({
+            "offset": 205,
+            "tolerance": 5,
+            "classes": {
+                initial: "headroom",
+                pinned: "headroom--pinned",
+                unpinned: "headroom--unpinned"
+            }
+        });
+    </script>
+    
+    <script id="store-list-template" type="text/x-handlebars-template">
+         <table data-role="none" id="store-table"  class="table">
+            <thead>
+                <th>#</th>
+                <th>가게명</th>
+                <th>주소</th>
+            </thead>
+            <tbody>
+                {{#list}}
+                <tr>
+                    <td><img src="../image/storeImg/{{storeNo}}.jpg"> 사진예정</td>
+                    <td>{{storeName}}</td>
+                    <td>{{storeAddr}}</td>
+                </tr>
+                {{/list}}
+            </tbody>
+        </table>
+    </script>
+
+    <div class="ui-loader-background"> </div>
+
+</body>
+</html>
